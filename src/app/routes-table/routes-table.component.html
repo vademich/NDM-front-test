@@ -1,0 +1,20 @@
+<div class="routes-table">
+    <h2>Действующие маршруты IPv4</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th (click)="sort('destination')">Адрес назначения</th>
+                <th (click)="sort('gateway')">Шлюз</th>
+                <th (click)="sort('interface')">Интерфейс</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let route of displayedRoutes$ | async">
+                <td>{{ route.destination }}</td>
+                <td>{{ route.gateway }}</td>
+                <td>{{ route.interface }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
